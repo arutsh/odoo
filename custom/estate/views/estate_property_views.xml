@@ -19,6 +19,10 @@
         <field name="selling_price"/>
         <field name="date_availability"/>
         <field name="property_type_id" />
+        <field name="salesperson_id" />
+        <field name="buyer_id" />
+        <field name="tag_ids" widget="many2many_tags" />
+        <field name="offer_ids" />
       </tree>
     </field>
   </record>
@@ -36,6 +40,9 @@
         <field name="selling_price"/>
         <field name="date_availability"/>
         <field name="property_type_id" />
+        <field name="salesperson_id"/>
+        <field name="buyer_id" />
+        <field name="tag_ids" widget="many2many_tags" />
         <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
         <separator/>
         <filter string="Livin Area >= 70" name="inactive" domain="[('living_area', '>=', 70)]"/>
@@ -55,6 +62,7 @@
           <h1>
             <field name="name"/>
           </h1>
+          <field name="tag_ids" widget="many2many_tags" />
           <group>
             <group>
               <field name="postcode"/>
@@ -76,6 +84,13 @@
                   <field name="garden_area"/>
                   <field name="garden_orientation"/>
                   <field name="property_type_id" />
+                  <field name="salesperson_id" />
+                  <field name="buyer_id" />
+                </group>
+              </page>
+              <page string="Offers">
+                <group>
+                  <field name="offer_ids"  />
                 </group>
               </page>
             </notebook>
