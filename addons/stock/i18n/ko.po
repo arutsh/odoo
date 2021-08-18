@@ -59,6 +59,9 @@ msgid ""
 "\n"
 "Transfers %s: You cannot validate these transfers if no quantities are reserved nor done. To force these transfers, switch in edit more and encode the done quantities."
 msgstr ""
+"\n"
+"\n"
+"재고 이동 %s: 예약되거나 완료된 수량이 0일경우 승인할 수 없습니다. 강제로 처리하기 위해, 수정을 눌러 완료 수량을 입력하세요."
 
 #. module: stock
 #: code:addons/stock/models/stock_picking.py:0
@@ -1613,7 +1616,7 @@ msgstr "고객 위치"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_delivery_dhl
 msgid "DHL USA Connector"
-msgstr ""
+msgstr "DHL USA 커넥터"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_report_stock_quantity__date
@@ -4067,7 +4070,7 @@ msgstr "보유 :"
 #: code:addons/stock/models/stock_inventory.py:0
 #, python-format
 msgid "Only a stock manager can validate an inventory adjustment."
-msgstr "재고 관리자만 재고 조정을 승인할 수 있습니다."
+msgstr "재고 관리자만 재고 조사를 승인할 수 있습니다."
 
 #. module: stock
 #: code:addons/stock/models/stock_rule.py:0
@@ -5954,7 +5957,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking__show_validate
 msgid "Show Validate"
-msgstr "검증 표시"
+msgstr "승인 표시"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
@@ -6363,7 +6366,7 @@ msgstr ""
 msgid ""
 "Technical field used to decide whether the button \"Validate\" should be "
 "displayed."
-msgstr ""
+msgstr "\"승인\"버튼을 표시할지 여부를 결정하는 데 사용되는 기술 필드입니다."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move__restrict_partner_id
@@ -6479,7 +6482,7 @@ msgstr ""
 #: code:addons/stock/static/src/js/inventory_validate_button_controller.js:0
 #, python-format
 msgid "The inventory has been validated"
-msgstr "재고가 검증되었습니다"
+msgstr "재고가 승인되었습니다"
 
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_warehouse_warehouse_name_uniq
@@ -7163,6 +7166,13 @@ msgid "Unreserve"
 msgstr "예약 해제"
 
 #. module: stock
+#: code:addons/stock/models/stock_inventory.py:0
+#: code:addons/stock/models/stock_inventory.py:0
+#, python-format
+msgid "Unsupported search on %s outside of an Inventory Adjustment"
+msgstr ""
+
+#. module: stock
 #: model:ir.ui.menu,name:stock.menu_stock_uom_form_action
 #: model_terms:ir.ui.view,arch_db:stock.report_product_product_replenishment
 #: model_terms:ir.ui.view,arch_db:stock.stock_inventory_line_tree
@@ -7238,7 +7248,7 @@ msgstr "사용자"
 #: model_terms:ir.ui.view,arch_db:stock.stock_scrap_form_view
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Validate"
-msgstr "유효성 검사"
+msgstr "승인"
 
 #. module: stock
 #. openerp-web
@@ -7252,7 +7262,7 @@ msgstr "재고조사 승인"
 #: model:ir.model.fields.selection,name:stock.selection__stock_inventory__state__done
 #: model_terms:ir.ui.view,arch_db:stock.view_inventory_filter
 msgid "Validated"
-msgstr "확인 됨"
+msgstr "승인됨"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_change_product_qty__product_variant_count
@@ -7696,7 +7706,7 @@ msgstr "고유 Serial 번호가 있는 품목의 1.0 %s만 처리할 수 있습�
 msgid ""
 "You can't validate the inventory '%s', maybe this inventory has been already"
 " validated or isn't ready."
-msgstr "'%s' 재고의 유효성을 확인할 수 없습니다. 이 재고가 이미 검증되었거나 준비되지 않았을 수 있습니다."
+msgstr "'%s' 재고를 승인할 수 없습니다. 이 재고가 이미 승인되었거나 준비되지 않았을 수 있습니다."
 
 #. module: stock
 #: code:addons/stock/models/stock_location.py:0
@@ -7825,6 +7835,7 @@ msgid ""
 "You cannot validate a transfer if no quantities are reserved nor done. To "
 "force the transfer, switch in edit mode and encode the done quantities."
 msgstr ""
+"예약되거나 완료된 수량이 없을 경우 승인할 수 없습니다. 재고이동을 강제로 처리하기 위해, 수정 모드에서 완료 수량을 입력하세요."
 
 #. module: stock
 #: code:addons/stock/wizard/stock_picking_return.py:0

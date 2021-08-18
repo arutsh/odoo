@@ -1200,6 +1200,13 @@ msgid "Action"
 msgstr "Tegevus"
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/res_config_settings.js:0
+#, python-format
+msgid "Activate anyway"
+msgstr "Aktiveeri sellegipoolest"
+
+#. module: website
 #: model:ir.model.fields,field_description:website.field_theme_ir_ui_view__active
 #: model:ir.model.fields,field_description:website.field_website_page__active
 #: model:ir.model.fields,field_description:website.field_website_rewrite__active
@@ -1580,6 +1587,14 @@ msgstr "Autor"
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "Auto"
 msgstr "Automaatne"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_popup_options
+msgid ""
+"Automatically opens the pop-up if the user stays on a page longer than the "
+"specified time."
+msgstr ""
+"Avab automaatselt pop-upi, kui kasutaja jääb lehele määratud ajast kauemaks."
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website__auto_redirect_lang
@@ -1998,6 +2013,13 @@ msgstr "Lõpetage ost nüüd ja teenige esimese tellimuse pealt 20$."
 #, python-format
 msgid "Check your configuration."
 msgstr "Kontrollige oma seadistust."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "Check your connexion and try again"
+msgstr "Kontrollige oma ühendust ja proovige uuesti"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_product_catalog
@@ -2998,6 +3020,13 @@ msgid "Display this website when users visit this domain"
 msgstr "Kuva see veebileht, kui kasutajad külastavad seda domeeni"
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/res_config_settings.js:0
+#, python-format
+msgid "Do not activate"
+msgstr "Ärge aktiveerige"
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_banner
 msgid "Do something"
 msgstr "Tee midagi"
@@ -3282,6 +3311,13 @@ msgstr "Tühi välja nimi %r"
 #, python-format
 msgid "Enable billing on your Google Project"
 msgstr "Võimalda oma Google projektis arveldamist"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "Enter an API Key"
+msgstr "Sisestage API võti"
 
 #. module: website
 #. openerp-web
@@ -4537,6 +4573,13 @@ msgstr "Suhtluse ajalugu"
 #: model_terms:ir.ui.view,arch_db:website.s_table_of_content
 msgid "Intuitive system"
 msgstr "Intuitiivne süsteem"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "Invalid API Key. The following error was returned by Google:"
+msgstr "Kehtetu API võti. Järgmine error saabus Google'i poolt tagasi:"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_company_team

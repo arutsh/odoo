@@ -6,6 +6,7 @@
 # Martin Trigaux, 2020
 # Bohdan Lisnenko, 2020
 # ТАрас <tratatuta@i.ua>, 2020
+# Yevhen Babii <eugene.babiy@gmail.com>, 2021
 # Alina Lisnenko <alinasemeniuk1@gmail.com>, 2021
 # 
 msgid ""
@@ -33,13 +34,13 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
 msgid "${object.partner_id.lang}"
-msgstr ""
+msgstr "${object.partner_id.lang}"
 
 #. module: mail
 #: code:addons/mail/models/mail_activity.py:0
 #, python-format
 msgid "%(activity_name)s: %(summary)s assigned to you"
-msgstr ""
+msgstr "%(activity_name)s: %(summary)s призначено вам"
 
 #. module: mail
 #: code:addons/mail/wizard/invite.py:0
@@ -59,7 +60,7 @@ msgstr "%(user_name)s запросив вас слідкувати за нови
 #: code:addons/mail/static/src/models/messaging_notification_handler/messaging_notification_handler.js:0
 #, python-format
 msgid "%d Message"
-msgstr ""
+msgstr "%d Повідомлення"
 
 #. module: mail
 #. openerp-web
@@ -80,7 +81,7 @@ msgstr "%d днів протерміновано"
 #: code:addons/mail/static/src/components/activity/activity.js:0
 #, python-format
 msgid "%d days overdue:"
-msgstr ""
+msgstr "%d протерміновних днів:"
 
 #. module: mail
 #: code:addons/mail/models/mail_template.py:0
@@ -106,14 +107,14 @@ msgstr "%s створено"
 #: code:addons/mail/static/src/models/messaging_notification_handler/messaging_notification_handler.js:0
 #, python-format
 msgid "%s from %s"
-msgstr ""
+msgstr "%s від %s"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/notification_request/notification_request.js:0
 #, python-format
 msgid "%s has a request"
-msgstr ""
+msgstr "%s має запит"
 
 #. module: mail
 #. openerp-web
@@ -180,6 +181,8 @@ msgid ""
 "<b attrs=\"{'invisible': [('no_record', '=', False)]}\" class=\"text-"
 "warning\">No record for this model</b>"
 msgstr ""
+"<b attrs=\"{'invisible': [('no_record', '=', False)]}\" class=\"text-"
+"warning\">Немає записів для цієї моделі</b>"
 
 #. module: mail
 #: code:addons/mail/models/mail_channel.py:0
@@ -191,6 +194,11 @@ msgid ""
 "            Type <b>/command</b> to execute a command.<br>\n"
 "            Type <b>:shortcut</b> to insert a canned response in your message.<br>"
 msgstr ""
+"<br><br>\n"
+"            Введіть <b>@username</b>, щоби згадати когось та звернути його увагу.<br>\n"
+"            Введіть <b>#channel</b>, щоби згадати канал.<br>\n"
+"            Введіть <b>/command</b>, щоби виконати команду.<br>\n"
+"            Введіть <b>:shortcut</b>, щоби вставити стандартну відповідь у ваше повідомлення.<br>"
 
 #. module: mail
 #: code:addons/mail/models/mail_channel.py:0
@@ -222,7 +230,7 @@ msgid ""
 "<div class=\"o_mail_notification\">joined <a href=\"#\" "
 "class=\"o_channel_redirect\" data-oe-id=\"%s\">#%s</a></div>"
 msgstr ""
-"<div class=\"o_mail_notification\">приєднано до <a href=\"#\" "
+"<div class=\"o_mail_notification\">приєдналися до <a href=\"#\" "
 "class=\"o_channel_redirect\" data-oe-id=\"%s\">#%s</a></div>"
 
 #. module: mail
@@ -232,13 +240,13 @@ msgid ""
 "<div class=\"o_mail_notification\">left <a href=\"#\" "
 "class=\"o_channel_redirect\" data-oe-id=\"%s\">#%s</a></div>"
 msgstr ""
-"<div class=\"o_mail_notification\">покинуто <a href=\"#\" "
+"<div class=\"o_mail_notification\">покинули <a href=\"#\" "
 "class=\"o_channel_redirect\" data-oe-id=\"%s\">#%s</a></div>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_document_file_kanban
 msgid "<i class=\"fa fa-globe\" aria-label=\"Document url\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-globe\" aria-label=\"Document url\"/>"
 
 #. module: mail
 #. openerp-web
@@ -251,7 +259,7 @@ msgid ""
 msgstr ""
 "<p><b>Спишіться зі співробітниками</b> в реальному часі, використовуючи "
 "прямі повідомлення.</p><p><i>Можливо, вам доведеться спочатку запросити "
-"користувачів із програми \"Налаштування\".</i></p>"
+"користувачів із модуля \"Налаштування\".</i></p>"
 
 #. module: mail
 #. openerp-web
@@ -292,7 +300,7 @@ msgstr "<p>Створіть канал тут.</p>"
 #: code:addons/mail/static/src/js/tours/mail.js:0
 #, python-format
 msgid "<p>Create a public or private channel.</p>"
-msgstr "<p>Створити публічний або приватний канал.</p>"
+msgstr "<p>Створіть публічний або приватний канал.</p>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
@@ -331,7 +339,7 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_template_preview_view_form
 msgid "<span class=\"col-md-5 col-lg-4 col-sm-12 pl-0\">Force a language: </span>"
-msgstr ""
+msgstr "<span class=\"col-md-5 col-lg-4 col-sm-12 pl-0\">Увімкнути мову: </span>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_resend_message_view_form
@@ -676,7 +684,7 @@ msgstr "Додати прикріплення"
 #: code:addons/mail/static/src/components/attachment_box/attachment_box.xml:0
 #, python-format
 msgid "Add attachments"
-msgstr ""
+msgstr "Додати прикріплення"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_wizard_invite_form
@@ -687,14 +695,14 @@ msgstr "Додати канали для сповіщення..."
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
 #: model_terms:ir.ui.view,arch_db:mail.mail_wizard_invite_form
 msgid "Add contacts to notify..."
-msgstr "Додайте контакти для сповіщення..."
+msgstr "Додати контакти для сповіщення..."
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/discuss_sidebar/discuss_sidebar.xml:0
 #, python-format
 msgid "Add or join a channel"
-msgstr ""
+msgstr "Додати канал"
 
 #. module: mail
 #. openerp-web
@@ -797,21 +805,21 @@ msgstr "Завжди дозволяти"
 #: code:addons/mail/models/res_partner.py:0
 #, python-format
 msgid "An email is required for find_or_create to work"
-msgstr ""
+msgstr "Електронний лист виагає find_or_create для роботи"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/notification_group/notification_group.xml:0
 #, python-format
 msgid "An error occurred when sending an email."
-msgstr ""
+msgstr "Виникла помилка під час надсилання листа."
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/models/user/user.js:0
 #, python-format
 msgid "An unexpected error occurred during the creation of the chat."
-msgstr ""
+msgstr "Під час створення чату виникла неочікувана помилка."
 
 #. module: mail
 #. openerp-web
@@ -860,6 +868,8 @@ msgid ""
 "Are you sure you want to discard %s mail delivery failures? You won't be "
 "able to re-send these mails later!"
 msgstr ""
+"Ви впевнені, що хочете відхилити %s помилки доставки пошти? Ви не зможете "
+"надіслати повторно ці листи пізніше!"
 
 #. module: mail
 #. openerp-web
@@ -908,7 +918,7 @@ msgstr "Кількість прикріплень"
 #: code:addons/mail/static/src/components/chatter_topbar/chatter_topbar.xml:0
 #, python-format
 msgid "Attachment counter loading..."
-msgstr ""
+msgstr "Завантаження підрахунку прикріплень..."
 
 #. module: mail
 #. openerp-web
@@ -1011,7 +1021,7 @@ msgstr "Аватар"
 #: code:addons/mail/static/src/components/notification_request/notification_request.xml:0
 #, python-format
 msgid "Avatar of OdooBot"
-msgstr ""
+msgstr "Аватар OdooBot"
 
 #. module: mail
 #. openerp-web
@@ -1066,7 +1076,7 @@ msgstr "Дата чорного списку"
 #. module: mail
 #: model:ir.actions.act_window,name:mail.mail_blacklist_action
 msgid "Blacklisted Email Addresses"
-msgstr ""
+msgstr "Електронні адреси у чорному списку"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_template__body_html
@@ -1083,7 +1093,7 @@ msgstr "Тіло листа"
 #: code:addons/mail/static/src/widgets/common.xml:0
 #, python-format
 msgid "Bot"
-msgstr ""
+msgstr "Бот"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_thread_blacklist__message_bounce
@@ -1176,7 +1186,7 @@ msgstr "Отримувачі копії повідомлення"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template_preview__email_cc
 msgid "Carbon copy recipients"
-msgstr ""
+msgstr "Одержувачі копії листа"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template__email_cc
@@ -1186,7 +1196,7 @@ msgstr "Отримувачі копії повідомлення (можна в�
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_company__catchall_formatted
 msgid "Catchall"
-msgstr ""
+msgstr "Catchall"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_company__catchall_email
@@ -1321,7 +1331,7 @@ msgstr "Закрити"
 #: code:addons/mail/static/src/components/attachment_viewer/attachment_viewer.xml:0
 #, python-format
 msgid "Close (Esc)"
-msgstr ""
+msgstr "Закрити (Esc)"
 
 #. module: mail
 #. openerp-web
@@ -1411,7 +1421,7 @@ msgstr "Налаштуйте ваші типи дій"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Configure your own email servers"
-msgstr ""
+msgstr "Налаштуйте сервери вашої електронної пошти"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_blacklist_remove_view_form
@@ -1514,20 +1524,20 @@ msgstr "Створити Uid"
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "Create new %(document)s"
-msgstr ""
+msgstr "Створіть новий %(document)s"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "Create new %(document)s by sending an email to %(email_link)s"
-msgstr ""
+msgstr "Створіть новий %(document)s надсилаючи email до %(email_link)s"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/discuss/discuss.js:0
 #, python-format
 msgid "Create or search channel..."
-msgstr ""
+msgstr "Створити або знайти канал..."
 
 #. module: mail
 #. openerp-web
@@ -1591,14 +1601,14 @@ msgstr "Створив"
 #: model:ir.model.fields,field_description:mail.field_mail_wizard_invite__create_date
 #, python-format
 msgid "Created on"
-msgstr "Створено на"
+msgstr "Створено"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/models/chatter/chatter.js:0
 #, python-format
 msgid "Creating a new record..."
-msgstr ""
+msgstr "Створення нового запису..."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_mail_search
@@ -1735,7 +1745,7 @@ msgstr "Визначте новий короткий код чату"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity_type__delay_label
 msgid "Delay Label"
-msgstr ""
+msgstr "Мітка затримки"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity_type__delay_from
@@ -1825,7 +1835,7 @@ msgstr "Скасувати невдалі доставки пошти"
 #: code:addons/mail/static/src/components/notification_group/notification_group.xml:0
 #, python-format
 msgid "Discard message delivery failures"
-msgstr ""
+msgstr "Відхилити помилки доставлення повідомлення"
 
 #. module: mail
 #. openerp-web
@@ -1937,14 +1947,14 @@ msgstr ""
 #: code:addons/mail/static/src/components/moderation_discard_dialog/moderation_discard_dialog.xml:0
 #, python-format
 msgid "Do you confirm the action?"
-msgstr ""
+msgstr "Ви підтвердили дію?"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/attachment_delete_confirm_dialog/attachment_delete_confirm_dialog.js:0
 #, python-format
 msgid "Do you really want to delete \"%s\"?"
-msgstr ""
+msgstr "Ви справді хочете видалити \"%s\"?"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_document_file_kanban
@@ -2045,14 +2055,14 @@ msgstr "Через %d днів"
 #: code:addons/mail/static/src/components/activity/activity.js:0
 #, python-format
 msgid "Due in %d days:"
-msgstr ""
+msgstr "Тривалість у %d днях:"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/activity/activity.xml:0
 #, python-format
 msgid "Due on"
-msgstr ""
+msgstr "Тривалість"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_actions_server__activity_date_deadline_range_type
@@ -2083,7 +2093,7 @@ msgstr "Редагувати партнерів"
 #: code:addons/mail/static/src/components/follower_subtype_list/follower_subtype_list.xml:0
 #, python-format
 msgid "Edit Subscription of"
-msgstr ""
+msgstr "Редагувати підписку"
 
 #. module: mail
 #. openerp-web
@@ -2148,7 +2158,7 @@ msgstr "Налаштування ел. пошти"
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_compose_message__composition_mode__mass_mail
 msgid "Email Mass Mailing"
-msgstr ""
+msgstr "Масова розсилка електронних листів"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_template_preview_view_form
@@ -2235,7 +2245,7 @@ msgstr "Електронний лист"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_followers__email
 msgid "Email of the related partner (if exist) or False"
-msgstr ""
+msgstr "Email пов'язаного партнера (якщо такий існує) або False"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_resend_message
@@ -2259,7 +2269,7 @@ msgstr "Ел. пошта"
 #: model:ir.model.fields,field_description:mail.field_mail_mail__is_internal
 #: model:ir.model.fields,field_description:mail.field_mail_message__is_internal
 msgid "Employee Only"
-msgstr ""
+msgstr "Лише співробітник"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_model_fields__tracking
@@ -2271,7 +2281,7 @@ msgstr "Увімкніть замовлене відстеження"
 #: code:addons/mail/static/src/components/notification_request/notification_request.xml:0
 #, python-format
 msgid "Enable desktop notifications to chat."
-msgstr ""
+msgstr "Увімкніть сповіщення на робочому столі для чату."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_resend_cancel_view_form
@@ -2368,13 +2378,13 @@ msgstr "Не пройшов"
 #: code:addons/mail/models/mail_render_mixin.py:0
 #, python-format
 msgid "Failed to render template : %s"
-msgstr ""
+msgstr "Невдалося відобразити шаблон : %s"
 
 #. module: mail
 #: code:addons/mail/models/mail_render_mixin.py:0
 #, python-format
 msgid "Failed to render template : %s (%d)"
-msgstr ""
+msgstr "Не вдалося відобразити шаблон : %s (%d)"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__failure_reason
@@ -2490,7 +2500,7 @@ msgstr ""
 #: code:addons/mail/static/src/components/discuss_sidebar/discuss_sidebar.js:0
 #, python-format
 msgid "Find or create a channel..."
-msgstr ""
+msgstr "Знайдіть або створіть канал..."
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_channel_partner__fold_state__folded
@@ -2579,7 +2589,7 @@ msgstr ""
 #: model:ir.model.fields,help:mail.field_res_partner__activity_type_icon
 #: model:ir.model.fields,help:mail.field_res_users__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Іконка зі шрифтом Font awesome, напр. fa-tasks"
+msgstr "Іконка з чудовим шрифтом, напр. fa-tasks"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_company__email_formatted
@@ -2725,6 +2735,9 @@ msgid ""
 "The following email sent to %s cannot be accepted because this is a private email address.\n"
 "Only allowed people can contact us at this address."
 msgstr ""
+"Привіт,<br/>\n"
+"Натсупний лист, надісланий %s, не можна прийняти, тому ще це приватна email-адреса.\n"
+"За цією адресою до нас можуть звертатися лише дозволені люди."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype__hidden
@@ -2742,6 +2755,8 @@ msgstr "Приховати підтип у параметрах підписни
 msgid ""
 "Hide to public / portal users, independently from subtype configuration."
 msgstr ""
+"Приховати для публічних / портальних користувачів, незалежно від "
+"конфігурації підтипу."
 
 #. module: mail
 #. openerp-web
@@ -2932,6 +2947,8 @@ msgstr ""
 msgid ""
 "If the related partner is active (if exist) or if related channel exist"
 msgstr ""
+"Якщо пов'язаний партнер активний (якщо такий існує) або якщо існує "
+"пов'язаний канал"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_res_config_settings__alias_domain
@@ -2971,7 +2988,7 @@ msgstr "Зображення"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_document_file_kanban
 msgid "Image is a link"
-msgstr ""
+msgstr "Зображення є посиланням"
 
 #. module: mail
 #: code:addons/mail/models/mail_alias.py:0
@@ -3064,7 +3081,7 @@ msgstr "Запрошення"
 #: code:addons/mail/wizard/invite.py:0
 #, python-format
 msgid "Invitation to follow %(document_model)s: %(document_name)s"
-msgstr ""
+msgstr "Запрошення підписатися %(document_model)s: %(document_name)s"
 
 #. module: mail
 #. openerp-web
@@ -3109,7 +3126,7 @@ msgstr "Тільки запрошені люди"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_followers__is_active
 msgid "Is Active"
-msgstr ""
+msgstr "Активно"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_moderation_view_search
@@ -3165,7 +3182,7 @@ msgstr "Є модератором"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel_partner__is_pinned
 msgid "Is pinned on the interface"
-msgstr "Є прикріпленим у інтерфейсі"
+msgstr "Є прикріпленим в інтерфейсі"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_channel_view_kanban
@@ -3234,7 +3251,7 @@ msgstr "Останнє вилучене"
 #: model:ir.model.fields,field_description:mail.field_res_partner____last_update
 #: model:ir.model.fields,field_description:mail.field_res_users____last_update
 msgid "Last Modified on"
-msgstr "Останні зміни на"
+msgstr "Останні зміни"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel__channel_last_seen_partner_ids
@@ -3425,7 +3442,7 @@ msgstr "Введіть внутрішню примітку"
 #: code:addons/mail/static/src/components/composer_text_input/composer_text_input.js:0
 #, python-format
 msgid "Log an internal note..."
-msgstr ""
+msgstr "Зробіть примітку..."
 
 #. module: mail
 #. openerp-web
@@ -3488,7 +3505,7 @@ msgstr "Форма каналу ел. пошти"
 #: code:addons/mail/static/src/models/notification_group/notification_group.js:0
 #, python-format
 msgid "Mail Failures"
-msgstr ""
+msgstr "Невдалі розсилки"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_render_mixin
@@ -3536,7 +3553,7 @@ msgstr "Поштова скринька недоступна - %s"
 #: code:addons/mail/static/src/components/discuss/discuss.js:0
 #, python-format
 msgid "Mailboxes"
-msgstr ""
+msgstr "Поштові скриньки"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__mail_ids
@@ -3637,7 +3654,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model,name:mail.model_base_partner_merge_automatic_wizard
 msgid "Merge Partner Wizard"
-msgstr "Помічник злиття партнерів"
+msgstr "Помічник об'єднання партнерів"
 
 #. module: mail
 #: code:addons/mail/wizard/base_partner_merge.py:0
@@ -3688,7 +3705,7 @@ msgstr "Назва запису повідомлення"
 #: code:addons/mail/static/src/components/moderation_reject_dialog/moderation_reject_dialog.js:0
 #, python-format
 msgid "Message Rejected"
-msgstr ""
+msgstr "Повідомлення відхилено"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype__name
@@ -3706,7 +3723,7 @@ msgstr "Повідомлення очікує модерації"
 #: code:addons/mail/static/src/components/notification_group/notification_group.xml:0
 #, python-format
 msgid "Message delivery failure image"
-msgstr ""
+msgstr "Зображення помилки доставки повідомлення"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_mail__description
@@ -3719,7 +3736,7 @@ msgstr "Опис повідомлення: тема або початок тіл
 #: code:addons/mail/static/src/components/discuss/discuss.js:0
 #, python-format
 msgid "Message posted on \"%s\""
-msgstr ""
+msgstr "Повідомлення опубліковане в \"%s\""
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_mail__email_to
@@ -3736,7 +3753,7 @@ msgstr ""
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "Message should be a valid EmailMessage instance"
-msgstr ""
+msgstr "Повідомлення має бути дійсним прикладом EmailMessage"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_message_subtype__name
@@ -3819,7 +3836,7 @@ msgstr "Пошук повідомлень"
 #: code:addons/mail/static/src/components/discuss_sidebar_item/discuss_sidebar_item.xml:0
 #, python-format
 msgid "Messages are sent by email"
-msgstr ""
+msgstr "Повідомлення надіслані через електронну пошту"
 
 #. module: mail
 #. openerp-web
@@ -3842,7 +3859,7 @@ msgstr "Повідомлення, позначені як прочитані, б
 #: code:addons/mail/static/src/components/message_list/message_list.xml:0
 #, python-format
 msgid "Messages pending moderation appear here."
-msgstr ""
+msgstr "Тут з’являються повідомлення, які очікують модерації."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_message_subtype__internal
@@ -3934,7 +3951,7 @@ msgstr "Модерація"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_channel_view_form
 msgid "Moderation List"
-msgstr ""
+msgstr "Список модерації"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_moderation_view_tree
@@ -4013,7 +4030,7 @@ msgstr "Назва отримується з відповідного докум
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_followers__name
 msgid "Name of the related partner (if exist) or the related channel"
-msgstr ""
+msgstr "Ім'я пов'язаного партнера (якщо такий існує) або пов'язаний канал"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template__report_name
@@ -4141,7 +4158,7 @@ msgstr "Наступний"
 #: code:addons/mail/static/src/components/attachment_viewer/attachment_viewer.xml:0
 #, python-format
 msgid "Next (Right-Arrow)"
-msgstr ""
+msgstr "Далі (Стрілка вправо)"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_view_tree
@@ -4251,7 +4268,7 @@ msgstr "Не знайдено одержувача."
 #: code:addons/mail/static/src/components/message_list/message_list.xml:0
 #, python-format
 msgid "No starred messages"
-msgstr "Нема повідомлень, позначених зірочкою"
+msgstr "Немає повідомлень, позначених зірочкою"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message__no_auto_thread
@@ -4590,7 +4607,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_template__report_template
 msgid "Optional report to print and attach"
-msgstr "Необов'язковий звіт для друку та додавання"
+msgstr "Необов'язковий звіт для друку та прикріплення"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_render_mixin__lang
@@ -5474,21 +5491,21 @@ msgstr "Пошук: %s"
 #: code:addons/mail/static/src/components/message_seen_indicator/message_seen_indicator.js:0
 #, python-format
 msgid "Seen by %s"
-msgstr ""
+msgstr "Переглянуто %s"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/message_seen_indicator/message_seen_indicator.js:0
 #, python-format
 msgid "Seen by %s and %s"
-msgstr ""
+msgstr "Переглянуто %s та %s"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/message_seen_indicator/message_seen_indicator.js:0
 #, python-format
 msgid "Seen by %s, %s and more"
-msgstr ""
+msgstr "Переглянуто %s, %s та більше"
 
 #. module: mail
 #. openerp-web
@@ -5509,7 +5526,7 @@ msgstr "Вибрати всі"
 #: code:addons/mail/static/src/widgets/discuss/discuss.xml:0
 #, python-format
 msgid "Select all messages"
-msgstr ""
+msgstr "Обрати всі повідомлення"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_render_mixin__model_object_field
@@ -5576,7 +5593,7 @@ msgstr "Надіслати зараз"
 #: code:addons/mail/static/src/components/composer_text_input/composer_text_input.js:0
 #, python-format
 msgid "Send a message to followers..."
-msgstr ""
+msgstr "Надішліть повідомлення підписникам..."
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_partner_mass_mail
@@ -5615,7 +5632,7 @@ msgstr "Надіслати повідомлення через ел. прошт�
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template_preview__email_from
 msgid "Sender address"
-msgstr ""
+msgstr "Адреса відправника"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template__email_from
@@ -5652,21 +5669,21 @@ msgstr "Дія на сервері"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_channel__active
 msgid "Set active to false to hide the channel without removing it."
-msgstr ""
+msgstr "Встановіть дію на false, щоби приховати канал, не видаляючи його."
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/chat_window_header/chat_window_header.xml:0
 #, python-format
 msgid "Shift left"
-msgstr ""
+msgstr "Зсув ліворуч"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/chat_window_header/chat_window_header.xml:0
 #, python-format
 msgid "Shift right"
-msgstr ""
+msgstr "Зсув праворуч"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__description
@@ -6348,7 +6365,7 @@ msgstr ""
 #: code:addons/mail/models/mail_blacklist.py:0
 #, python-format
 msgid "Unblacklisting Reason: %s"
-msgstr ""
+msgstr "Причина Вилучення з Чорного Списку: %s"
 
 #. module: mail
 #. openerp-web
@@ -6837,14 +6854,14 @@ msgstr ""
 #: code:addons/mail/static/src/models/messaging/messaging.js:0
 #, python-format
 msgid "You can only open the profile of existing channels."
-msgstr ""
+msgstr "Ви можете відкрити профілі лише існуючих каналів."
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/models/user/user.js:0
 #, python-format
 msgid "You can only open the profile of existing users."
-msgstr ""
+msgstr "Ви можете відкрити профілі лише існуючих користувачів."
 
 #. module: mail
 #: code:addons/mail/models/res_users.py:0
@@ -6915,7 +6932,7 @@ msgstr ""
 #: code:addons/mail/static/src/components/message_list/message_list.xml:0
 #, python-format
 msgid "You have no messages to moderate."
-msgstr ""
+msgstr "У вас немає повідомлень для модерації."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template__attachment_ids
@@ -6958,7 +6975,7 @@ msgstr "Ваші"
 #: code:addons/mail/static/src/components/message/message.xml:0
 #, python-format
 msgid "Your message is pending moderation."
-msgstr ""
+msgstr "Ваше повідомлення очікує на модерацію."
 
 #. module: mail
 #. openerp-web
@@ -6992,7 +7009,7 @@ msgstr "Збільшити"
 #: code:addons/mail/static/src/components/attachment_viewer/attachment_viewer.xml:0
 #, python-format
 msgid "Zoom In (+)"
-msgstr ""
+msgstr "Збільшити (+)"
 
 #. module: mail
 #. openerp-web
@@ -7007,7 +7024,7 @@ msgstr "Зменшити"
 #: code:addons/mail/static/src/components/attachment_viewer/attachment_viewer.xml:0
 #, python-format
 msgid "Zoom Out (-)"
-msgstr ""
+msgstr "Зменшити (-)"
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_activity_type__delay_from__previous_activity
@@ -7023,7 +7040,7 @@ msgstr "після дати перевірки"
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "alias %(name)s: %(error)s"
-msgstr ""
+msgstr "псевдонім %(name)s: %(error)s"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_activity_assigned
@@ -7093,7 +7110,7 @@ msgstr "для"
 #: code:addons/mail/static/src/components/activity/activity.js:0
 #, python-format
 msgid "for %s"
-msgstr ""
+msgstr "для %s"
 
 #. module: mail
 #: model:mail.channel,name:mail.channel_all_employees
@@ -7103,12 +7120,12 @@ msgstr "загальне"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_origin_link
 msgid "has been created from:"
-msgstr ""
+msgstr "створено з:"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_origin_link
 msgid "has been modified from:"
-msgstr ""
+msgstr "змінено з:"
 
 #. module: mail
 #: code:addons/mail/models/models.py:0
@@ -7125,7 +7142,7 @@ msgstr "неправильно налаштований псевдонім (не
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_blacklist_remove_view_form
 msgid "mail_blacklist_removal"
-msgstr ""
+msgstr "mail_blacklist_removal"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:0
@@ -7164,7 +7181,7 @@ msgstr "на"
 #: code:addons/mail/static/src/components/composer/composer.xml:0
 #, python-format
 msgid "on:"
-msgstr ""
+msgstr "на:"
 
 #. module: mail
 #. openerp-web
@@ -7206,6 +7223,8 @@ msgid ""
 "reply to missing document (%(model)s,%(thread)s), fall back on document "
 "creation"
 msgstr ""
+"дайте відповідь на відсутні документи (%(model)s,%(thread)s), поверніться на"
+" створення документу"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:0
@@ -7279,7 +7298,7 @@ msgstr "використовуючи"
 #: code:addons/mail/static/src/xml/many2one_avatar_user.xml:0
 #, python-format
 msgid "value"
-msgstr ""
+msgstr "значення"
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_activity_type__delay_unit__weeks
@@ -7291,11 +7310,11 @@ msgstr "тижні"
 #: code:addons/mail/static/src/models/follower/follower.js:0
 #, python-format
 msgid "The subscription preferences were successfully applied."
-msgstr ""
+msgstr "Вподобання підписки було успішно застосовано."
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/components/message/message.xml:0
 #, python-format
 msgid "channel"
-msgstr ""
+msgstr "канал"
