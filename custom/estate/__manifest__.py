@@ -3,9 +3,9 @@
     'depends': [
         'base',
         'web',
-        'estate_property_type',
         'estate_property_tag',
         'estate_property_offer',
+        'estate_property_type',
     ],
     'application': True,
     'data': [

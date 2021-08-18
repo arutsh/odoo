@@ -3,7 +3,7 @@
     'depends': [
         'base',
         'web',
-        'estate'
+
     ],
     'application': True,
     'data': [
