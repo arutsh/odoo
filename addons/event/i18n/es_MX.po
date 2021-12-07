@@ -2417,7 +2417,8 @@ msgstr "En curso"
 #: model:ir.model.fields,help:event.field_event_type__seats_max
 msgid "It will select this default maximum value when you choose this event"
 msgstr ""
-"Se seleccionará este valor máximo por defecto cuando seleccione este evento"
+"Se seleccionará este valor máximo predeterminado cuando seleccione este "
+"evento"
 
 #. module: event
 #: model_terms:event.event,description:event.event_2
@@ -3296,7 +3297,7 @@ msgstr ""
 "Estado basado en actividades\n"
 "Vencida: la fecha límite ya ha pasado\n"
 "Hoy: La fecha tope es hoy\n"
-"Planificada: futuras actividades."
+"Planeada: futuras actividades."
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_tag__color

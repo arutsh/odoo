@@ -682,6 +682,18 @@ registry.backgroundVideo = publicWidget.Widget.extend({
 
         $(window).on('resize.' + this.iframeID, throttledUpdate);
 
+        const $modal = this.$target.closest('.modal');
+        if ($modal.length) {
+            $modal.on('show.bs.modal', () => {
+                const videoContainerEl = this.$target[0].querySelector('.o_bg_video_container');
+                videoContainerEl.classList.add('d-none');
+            });
+            $modal.on('shown.bs.modal', () => {
+                this._adjustIframe();
+                const videoContainerEl = this.$target[0].querySelector('.o_bg_video_container');
+                videoContainerEl.classList.remove('d-none');
+            });
+        }
         return Promise.all(proms).then(() => this._appendBgVideo());
     },
     /**
@@ -915,7 +927,12 @@ registry.FullScreenHeight = publicWidget.Widget.extend({
      * @override
      */
     start() {
-        if (this.$el.outerHeight() > this._computeIdealHeight()) {
+        this.inModal = !!this.el.closest('.modal');
+
+        // TODO maybe review the way the public widgets work for non-visible-at-
+        // load snippets -> probably better to not do anything for them and
+        // start the widgets only once they become visible..?
+        if (this.$el.is(':not(:visible)') || this.$el.outerHeight() > this._computeIdealHeight()) {
             // Only initialize if taller than the ideal height as some extra css
             // rules may alter the full-screen-height class behavior in some
             // cases (blog...).
@@ -949,6 +966,10 @@ registry.FullScreenHeight = publicWidget.Widget.extend({
      */
     _computeIdealHeight() {
         const windowHeight = $(window).outerHeight();
+        if (this.inModal) {
+            return (windowHeight - $('#wrapwrap').position().top);
+        }
+
         // Doing it that way allows to considerer fixed headers, hidden headers,
         // connected users, ...
         const firstContentEl = $('#wrapwrap > main > :first-child')[0]; // first child to consider the padding-top of main
