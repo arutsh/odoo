@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="view_stock_product_template_tree_extra_enhanced" model="ir.ui.view">
+      <field name="name">product.template.extra.tree.inherit</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_tree_view"/>
+      <field name="arch" type="xml">
+          <field name="uom_id" position="before">
+            <!-- <field name="shortage_date" attrs="{'invisible':[('type', '!=', 'product')]}" optional="show" />
+            <field name="shortage_qty" attrs="{'invisible':[('type', '!=', 'product')]}" optional="show" />
+-->
+          </field>
+      </field>
+  </record>
+</odoo>

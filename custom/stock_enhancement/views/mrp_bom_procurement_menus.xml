@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <menuitem id="menu_mrp_bom_procurement_form_action"
+      name="MRP Bom for procurement"
+      action="mrp_bom_procurement_form_action"
+      parent="mrp.menu_mrp_bom"/>
+</odoo>
