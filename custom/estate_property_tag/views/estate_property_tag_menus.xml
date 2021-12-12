@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<odoo>
-<!--  <menuitem id="estate_property_type_menu_action"
-           parent="estate.property.estate_property_menu_root"
-           action="estate_property_type_action"/>  -->
-</odoo>
