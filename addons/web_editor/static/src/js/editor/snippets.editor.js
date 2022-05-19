@@ -222,7 +222,7 @@ var SnippetEditor = Widget.extend({
             return;
         }
 
-        const $modal = this.$target.find('.modal');
+        const $modal = this.$target.find('.modal:visible');
         const $target = $modal.length ? $modal : this.$target;
         const targetEl = $target[0];
 
@@ -310,6 +310,7 @@ var SnippetEditor = Widget.extend({
         await this.toggleOptions(false);
         // If it is an invisible element, we must close it before deleting it (e.g. modal)
         await this.toggleTargetVisibility(!this.$target.hasClass('o_snippet_invisible'));
+        this.trigger_up('will_remove_snippet', {$target: this.$target});
 
         await new Promise(resolve => {
             this.trigger_up('call_for_each_child_snippet', {
@@ -2257,6 +2258,12 @@ var SnippetsMenu = Widget.extend({
      * @return {Promise}
      */
     async _scrollToSnippet($el) {
+        // Don't scroll if $el is added to a visible popup that does not fill
+        // the page (otherwise the page would scroll to a random location).
+        const modalEl = $el[0].closest('.modal');
+        if (modalEl && !dom.hasScrollableContent(modalEl)) {
+            return;
+        }
         return dom.scrollTo($el[0], {extraOffset: 50});
     },
     /**

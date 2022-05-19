@@ -307,6 +307,9 @@ class Website(models.Model):
 
             request.session['sale_order_id'] = sale_order.id
 
+            # The order was created with SUPERUSER_ID, revert back to request user.
+            sale_order = sale_order.with_user(self.env.user).sudo()
+
         # case when user emptied the cart
         if not request.session.get('sale_order_id'):
             request.session['sale_order_id'] = sale_order.id
@@ -389,6 +392,7 @@ class Website(models.Model):
 
     def _bootstrap_snippet_filters(self):
         super(Website, self)._bootstrap_snippet_filters()
+        # The same behavior is done in the post_init hook
         action = self.env.ref('website_sale.dynamic_snippet_products_action', raise_if_not_found=False)
         if action:
             self.env['website.snippet.filter'].create({

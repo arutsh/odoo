@@ -102,6 +102,9 @@ class PosOrder(models.Model):
 
         return new_session
 
+    def _get_fields_for_draft_order(self):
+        """This method is here to be overridden in order to add fields that are required for draft orders."""
+        return []
 
     @api.model
     def _process_order(self, order, draft, existing_order):
@@ -143,7 +146,7 @@ class PosOrder(models.Model):
             pos_order._create_order_picking()
 
         if pos_order.to_invoice and pos_order.state == 'paid':
-            pos_order.action_pos_order_invoice()
+            pos_order._generate_pos_order_invoice()
 
         return pos_order.id
 
@@ -494,8 +497,14 @@ class PosOrder(models.Model):
             else False
         }
         return vals
-
     def action_pos_order_invoice(self):
+        self.write({'to_invoice': True})
+        res = self._generate_pos_order_invoice()
+        if self.company_id.anglo_saxon_accounting and self.session_id.update_stock_at_closing:
+            self._create_order_picking()
+        return res
+
+    def _generate_pos_order_invoice(self):
         moves = self.env['account.move']
 
         for order in self:
@@ -633,7 +642,6 @@ class PosOrder(models.Model):
             'datas': ticket,
             'res_model': 'pos.order',
             'res_id': self.ids[0],
-            'store_fname': filename,
             'mimetype': 'image/jpeg',
         })
         mail_values = {
@@ -652,7 +660,6 @@ class PosOrder(models.Model):
                 'name': filename,
                 'type': 'binary',
                 'datas': base64.b64encode(report[0]),
-                'store_fname': filename,
                 'res_model': 'pos.order',
                 'res_id': self.ids[0],
                 'mimetype': 'application/x-pdf'
